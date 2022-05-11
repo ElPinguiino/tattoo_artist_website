@@ -11,5 +11,7 @@ urlpatterns = [
     path('merch_item', merch_item_view),
     path('gift_certificate', gift_certificate_view),
     path('promotion', promotion_view),
-    path('sale', sale_view),
+    # path('sale', sale_view),
+    path('event', event_view),
+    path('faq', faq_view),
 ]

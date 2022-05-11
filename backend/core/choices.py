@@ -31,13 +31,13 @@ SATURDAY = "Saturday"
 SUNDAY = "Sunday"
 
 DAYS_OF_WEEK = (
-    (MONDAY, "Monday"),
-    (TUESDAY, "Tuesday"),
-    (WEDNESDAY, "Wednesday"),
-    (THURSDAY, "Thursday"),
-    (FRIDAY, "Friday"),
-    (SATURDAY, "Saturday"),
-    (SUNDAY, "Sunday"),
+    (1, ("Monday")),
+    (2, ("Tuesday")),
+    (3, ("Wednesday")),
+    (4, ("Thursday")),
+    (5, ("Friday")),
+    (6, ("Saturday")),
+    (7, ("Sunday")),
 )
 
 ## Choices for the Consultation Model

@@ -22,12 +22,12 @@ def artist_info_view(request):
 @api_view(['GET', 'POST'])
 def weekly_availability_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = WeeklyAvailability.objects.all()
+        serializer = WeeklyAvailabilitySerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = WeeklyAvailabilitySerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -36,12 +36,12 @@ def weekly_availability_view(request):
 @api_view(['GET', 'POST'])
 def consultation_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = Consultation.objects.all()
+        serializer = ConsultationSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = ConsultationSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -50,12 +50,12 @@ def consultation_view(request):
 @api_view(['GET', 'POST'])
 def booking_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = Booking.objects.all()
+        serializer = BookingSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = BookingSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -64,12 +64,12 @@ def booking_view(request):
 @api_view(['GET', 'POST'])
 def client_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = Client.objects.all()
+        serializer = ClientSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = ClientSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -78,12 +78,12 @@ def client_view(request):
 @api_view(['GET', 'POST'])
 def gallery_post_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = GalleryPost.objects.all()
+        serializer = GalleryPostSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = GalleryPostSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -92,12 +92,12 @@ def gallery_post_view(request):
 @api_view(['GET', 'POST'])
 def merch_item_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = MerchItem.objects.all()
+        serializer = MerchItemSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = MerchItemSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -106,12 +106,12 @@ def merch_item_view(request):
 @api_view(['GET', 'POST'])
 def gift_certificate_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = GiftCertificate.objects.all()
+        serializer = GiftCertificateSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = GiftCertificateSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -120,26 +120,54 @@ def gift_certificate_view(request):
 @api_view(['GET', 'POST'])
 def promotion_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = Promotion.objects.all()
+        serializer = PromotionSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = PromotionSerializer(data=request.data)
+        if serializer.is_valid():
+            # view logic
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+# @api_view(['GET', 'POST'])
+# def sale_view(request):
+#     if request.method == 'GET':
+#         qs = Sale.objects.all()
+#         serializer = SaleSerializer(qs, many=True)
+#         return Response(serializer.data)
+
+#     elif request.method == 'POST':
+#         serializer = SaleSerializer(data=request.data)
+#         if serializer.is_valid():
+#             # view logic
+#             return Response(serializer.data, status=status.HTTP_201_CREATED)
+#         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET', 'POST'])
+def event_view(request):
+    if request.method == 'GET':
+        qs = Event.objects.all()
+        serializer = EventSerializer(qs, many=True)
+        return Response(serializer.data)
+
+    elif request.method == 'POST':
+        serializer = EventSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 @api_view(['GET', 'POST'])
-def sale_view(request):
+def faq_view(request):
     if request.method == 'GET':
-        qs = ArtistInfo.objects.all()
-        serializer = ArtistInfoSerializer(qs, many=True)
+        qs = FAQ.objects.all()
+        serializer = FAQSerializer(qs, many=True)
         return Response(serializer.data)
 
     elif request.method == 'POST':
-        serializer = ArtistInfoSerializer(data=request.data)
+        serializer = FAQSerializer(data=request.data)
         if serializer.is_valid():
             # view logic
             return Response(serializer.data, status=status.HTTP_201_CREATED)
