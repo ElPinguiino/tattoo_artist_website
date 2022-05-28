@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import tw from 'tailwind-styled-components';
 
 export const MainContainer = tw.div`
-    py-6
 `
 
 export const TitleContainer = tw.div`
@@ -14,6 +13,7 @@ export const TitleContainer = tw.div`
 
 export const Title = tw.h2`
     text-lg
+    text-black
 `
 export const EventsContainer = tw.div`
     justify-center
@@ -33,5 +33,5 @@ export const EventCard = tw.div`
 `
 
 export const EventDetails = tw.p`
-
+    text-black
 `

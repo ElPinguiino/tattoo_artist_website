@@ -15,6 +15,7 @@ export const ContentContainer = tw.div`
 
 export const ArtistPictureContainer = tw.div`
     lg:flex-1
+    mr-6
 `
 
 export const ArtistPicture = tw.img`
@@ -30,18 +31,5 @@ export const ArtistBioContainer = tw.div`
 
 export const ArtistBio = tw.p`
     text-lg
-    line-clamp-10
     text-black
-`
-
-export const StyledButton = tw.button`
-    focus:outline-none
-    text-white
-    bg-lisa-yellow
-    font-medium
-    rounded-lg
-    text-sm
-    px-5 
-    py-2.5
-    mb-2
 `

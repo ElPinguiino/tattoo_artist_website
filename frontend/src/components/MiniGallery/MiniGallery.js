@@ -35,21 +35,3 @@ const MiniGallery = () => {
 }
 
 export default MiniGallery
-
-
-
-
-{/* <MainContainer>
-            <TitleContainer>
-                <Title>Recent Work</Title>
-            </TitleContainer>
-            <div class="carousel rounded-box">
-            {recentImages.map((recentImages, index) => (
-                <div class="carousel-item" key={index}>
-                    <img src={recentImages.image} alt="caption" />
-                </div>
-                )
-                )
-            }
-            </div> 
-        </MainContainer> */}

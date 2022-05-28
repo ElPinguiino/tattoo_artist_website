@@ -4,7 +4,7 @@ from ..models import *
 class ArtistInfoSerializer(serializers.ModelSerializer):
     class Meta:
         model = ArtistInfo
-        fields = ('id', 'name', 'mini_bio', 'main_bio')
+        fields = ('id', 'name', 'bio', 'image')
 
 class WeeklyAvailabilitySerializer(serializers.ModelSerializer):
     class Meta:

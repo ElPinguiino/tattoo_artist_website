@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { MainContainer, ContentContainer, ArtistPictureContainer, ArtistPicture, ArtistBioContainer, ArtistBio, StyledButton } from './MiniAboutElements';
-import image from '../../assets/images/stephaniejohnson.png';
+import { MainContainer, ContentContainer, ArtistPictureContainer, ArtistPicture, ArtistBioContainer, ArtistBio } from '../About/AboutElements'
 
-const MiniAbout = () => {
+const About = () => {
   const [artistInfo, setArtistInfo] = useState([]);
 
   const getArtistInfo = async () => {
@@ -18,7 +17,7 @@ const MiniAbout = () => {
 
   return (
     <>
-      <MainContainer>
+        <MainContainer>
         <div key={artistInfo.id}>
         {artistInfo.map((artistInfo) => (
           <ContentContainer>
@@ -26,8 +25,7 @@ const MiniAbout = () => {
             <ArtistPicture src={artistInfo.image} />
           </ArtistPictureContainer>
           <ArtistBioContainer>
-            <ArtistBio>{artistInfo.bio}</ArtistBio>
-            <StyledButton type="button"><a href="/about">Read Bio</a></StyledButton>
+            <ArtistBio >{artistInfo.bio}</ArtistBio>
           </ArtistBioContainer>
         </ContentContainer>
         ))}
@@ -37,4 +35,4 @@ const MiniAbout = () => {
   )
 }
 
-export default MiniAbout
+export default About

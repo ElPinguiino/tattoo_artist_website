@@ -6,8 +6,8 @@ import uuid
 class ArtistInfo(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200, null=False)
-    mini_bio = models.TextField(max_length=500, null=True)
-    main_bio = models.TextField(max_length=3000, null=True)
+    bio = models.TextField(max_length=3000, null=True)
+    image = models.ImageField(null=True, blank=True)
 
     def __str__(self):
         return self.name

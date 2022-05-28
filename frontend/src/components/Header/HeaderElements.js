@@ -9,7 +9,8 @@ export const MainContainer = tw.div`
 `
 
 export const Title = tw.h2`
-    text-lg
+    text-3xl
+    md:text-4xl
     font-mono
-    bg-clip-text text-transparent bg-gradient-to-l from-blue-300 to-green-400
+    bg-clip-text text-transparent bg-gradient-to-r from-lisa-pink via-lisa-orange via-lisa-yellow via-lisa-green to-lisa-blue
 `

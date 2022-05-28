@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import *
 
 class ArtistInfoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'mini_bio', 'main_bio')
+    list_display = ('id', 'name', 'bio', 'image')
 
 class WeeklyAvailabilityAdmin(admin.ModelAdmin):
     list_display = ('week_id', 'availability_type', 'day_of_the_week', 'start_time', 'end_time')

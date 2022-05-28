@@ -30,8 +30,7 @@ export const Title = tw.h1`
     text-2xl
     font-medium
     text-center
-    title-font
-    text-gray-900
+    text-black
     mb-4
 `
 
@@ -41,6 +40,7 @@ export const StyledP = tw.p`
     xl:w-2/4
     lg:w-3/4
     mx-auto
+    text-black
 `
 export const OuterDiv = tw.div`
     flex
@@ -68,8 +68,9 @@ export const StyledSummary = tw.summary`
     rounded-md
     py-2
     px-4
+    bg-gradient-to-r from-yellow-400/50 via-yellow-400/50 to-yellow-400/50
 `
 
 export const StyledSpan = tw.span`
-
+    
 `

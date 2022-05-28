@@ -8,7 +8,7 @@ export const StyledButton = tw.button`
     items-center 
     cursor-pointer
     fixed
-    right-10
+    right-4
     top-6
     z-50
 `
@@ -19,7 +19,7 @@ export const StyledSVG = tw.svg`
     flex
     items-center
     cursor-pointer
-    right-10
+    right-4
     top-6
 `
 
